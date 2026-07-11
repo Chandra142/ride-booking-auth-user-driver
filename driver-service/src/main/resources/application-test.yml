@@ -1,0 +1,31 @@
+# Test profile — uses H2, disables Eureka and Redis for standalone testing
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+  # Disable Redis in test mode — LocationService will still work
+  # but location updates will only go to the H2 database
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+
+  cloud:
+    discovery:
+      enabled: false
+
+eureka:
+  client:
+    enabled: false

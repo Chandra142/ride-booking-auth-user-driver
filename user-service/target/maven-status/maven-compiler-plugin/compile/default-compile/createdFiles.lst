@@ -1,0 +1,8 @@
+com\ridebooking\user\dto\UserProfileResponse.class
+com\ridebooking\user\UserServiceApplication.class
+com\ridebooking\user\service\UserService.class
+com\ridebooking\user\entity\UserProfile.class
+com\ridebooking\user\dto\UserProfileRequest.class
+com\ridebooking\user\exception\GlobalExceptionHandler.class
+com\ridebooking\user\repository\UserProfileRepository.class
+com\ridebooking\user\controller\UserController.class

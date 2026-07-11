@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- This module's parent is our root project -->
+    <parent>
+        <groupId>com.ridebooking</groupId>
+        <artifactId>ride-booking-system</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>common-dtos</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+    <description>Shared DTOs, constants, and utility classes</description>
+
+    <!--
+        No dependencies needed beyond what the parent provides.
+        This module is intentionally lightweight — it's just
+        POJOs and constants that get bundled into a JAR.
+    -->
+    <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

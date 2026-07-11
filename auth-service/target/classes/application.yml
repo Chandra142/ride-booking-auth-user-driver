@@ -1,0 +1,71 @@
+# ============================================================
+# AUTH SERVICE — PRODUCTION CONFIGURATION
+# ============================================================
+#
+# This file is the default configuration (active when no Spring
+# profile is set, or when the "default" profile is active).
+# It connects to PostgreSQL and Eureka.
+#
+# Spring Boot loads application.yml automatically on startup.
+# Properties can be overridden by:
+# 1. application-{profile}.yml (e.g., application-test.yml)
+# 2. Environment variables
+# 3. Command-line arguments (--server.port=8081)
+
+server:
+  port: 8081
+
+spring:
+  application:
+    name: auth-service  # This name is registered in Eureka
+
+  # ========================
+  # DATABASE — PostgreSQL
+  # ========================
+  datasource:
+    url: jdbc:mysql://localhost:3306/ride_booking?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # ========================
+  # JPA / HIBERNATE
+  # ========================
+  jpa:
+    hibernate:
+      # ddl-auto: update
+      #   - create: Drop tables, create new ones (loses data)
+      #   - update: Alter existing tables to match entities (adds columns)
+      #   - validate: Check that tables match entities (production)
+      #   - none: Don't touch the database
+      # We use 'update' for development
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        # Naming strategy: camelCase in Java -> snake_case in DB
+        # Example: "createdAt" -> "created_at"
+        naming:
+          physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+
+# ========================
+# EUREKA DISCOVERY CLIENT
+# ========================
+eureka:
+  client:
+    enabled: false
+    register-with-eureka: false
+    fetch-registry: false
+
+# ========================
+# JWT CONFIGURATION
+# ========================
+jwt:
+  # Secret key for signing tokens. IN PRODUCTION, use an environment
+  # variable or Vault, NOT a hardcoded value.
+  secret: "ThisIsMySecretKeyForRideBookingSystem2024!@#$"
+  # Access token expiration: 15 minutes (milliseconds)
+  expiration: 900000
+  # Refresh token expiration: 7 days (milliseconds)
+  refresh-expiration: 604800000
