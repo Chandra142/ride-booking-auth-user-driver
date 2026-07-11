@@ -24,8 +24,8 @@ spring:
   # ========================
   datasource:
     url: jdbc:mysql://localhost:3306/ride_booking?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
-    username: MYSQL USERNAME HERE
-    password: MY SQL PASSWORD HERE
+    username: root
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   # ========================

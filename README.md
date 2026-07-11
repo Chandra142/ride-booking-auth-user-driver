@@ -32,11 +32,11 @@ A Spring Boot Microservices project implementing the **Authentication**, **User 
                                 │
                                 ▼
                         👤 User Service
-                    🟡 🚧 In Progress
+                     🟢 ✅ Completed
                                 │
                                 ▼
                        🚗 Driver Service
-                    🟡 🚧 In Progress
+                     🟡 🚧 In Progress
                                 │
                                 ▼
                         🌐 API Gateway
@@ -61,57 +61,65 @@ A Spring Boot Microservices project implementing the **Authentication**, **User 
 | Module | Status | Progress |
 |---------|--------|----------|
 | 🔐 Authentication Service | ✅ Completed | ██████████ 100% |
-| 👤 User Service | 🚧 In Progress | ███░░░░░░░ 30% |
+| 👤 User Service | ✅ Completed | ██████████ 100% |
 | 🚗 Driver Service | 🚧 In Progress | ██░░░░░░░░ 20% |
 | 🌐 API Gateway | ⏳ Pending | ░░░░░░░░░░ 0% |
 | 📡 Service Registry | ⏳ Pending | ░░░░░░░░░░ 0% |
-| 🔄 Integration & Testing | ⏳ Pending | ░░░░░░░░░░ 0% |
+| 🔄 Service Integration | ⏳ Pending | ░░░░░░░░░░ 0% |
+
+**Overall Project Progress:** **40% Complete** ████████░░░░░░░░░░░░
 
 ---
 
 # 👨‍💻 My Contribution
 
-### 🔐 Authentication Service
+## 🔐 Authentication Service ✅
 
-- ✅ User Registration
-- ✅ User Login
-- ✅ JWT Authentication
-- ✅ Refresh Token Generation
-- ✅ BCrypt Password Encryption
-- ✅ Spring Security Configuration
-- ✅ Role-Based Authentication
-- ✅ Request Validation
-- ✅ Global Exception Handling
-- ✅ REST API Development
-
----
-
-### 👤 User Service *(In Progress)*
-
-- 🚧 User Profile Management
-- 🚧 Get User by ID
-- 🚧 Get User by Email
-- 🚧 Update User Profile
-- 🚧 Delete User Profile
+- User Registration
+- User Login
+- JWT Authentication
+- JWT Refresh Token
+- BCrypt Password Encryption
+- Spring Security Configuration
+- Role-Based Authentication
+- Request Validation
+- Global Exception Handling
+- REST API Development
+- MySQL Integration
 
 ---
 
-### 🚗 Driver Service *(In Progress)*
+## 👤 User Service ✅
 
-- 🚧 Driver Registration
-- 🚧 Driver Profile Management
-- 🚧 Vehicle Information
-- 🚧 Driver Availability
-- 🚧 Driver Verification
+- User Profile Creation
+- Get User Profile
+- Update User Profile
+- Header-Based Authentication (`X-User-Id`)
+- Request Validation
+- Global Exception Handling
+- Spring Data JPA & Hibernate
+- MySQL Integration
+- REST API Development
+
+---
+
+## 🚗 Driver Service 🚧
+
+- Driver Registration
+- Driver Profile Management
+- Vehicle Information
+- Driver Availability
+- Driver Verification
+- Ride Acceptance/Rejection *(Planned)*
 
 ---
 
 # 📌 Project Features
 
-### Authentication
+### 🔐 Authentication
 
 - Secure User Registration
-- Secure Login
+- Secure User Login
 - JWT Access Token
 - Refresh Token Support
 - BCrypt Password Hashing
@@ -119,16 +127,26 @@ A Spring Boot Microservices project implementing the **Authentication**, **User 
 - Request Validation
 - Exception Handling
 
+### 👤 User Management
+
+- Create User Profile
+- View User Profile
+- Update User Profile
+- Profile Validation
+- MySQL Persistence
+- Header-Based User Identification
+
 ---
 
 # 🚀 Current Status
 
 - ✅ Authentication Service Completed
-- 🚧 User Service Development Started
-- 🚧 Driver Service Development Started
-- ⏳ API Gateway Integration
-- ⏳ Service Registry (Eureka)
-- ⏳ End-to-End Integration
+- ✅ User Service Completed
+- 🚧 Driver Service Development
+- ⏳ API Gateway
+- ⏳ Eureka Service Registry
+- ⏳ Microservices Integration
+- ⏳ End-to-End Testing
 
 ---
 
@@ -140,8 +158,34 @@ This project is being developed to strengthen knowledge in:
 - Spring Security
 - JWT Authentication
 - REST API Development
-- JPA & Hibernate
-- MySQL
+- Spring Data JPA & Hibernate
+- MySQL Database Design
+- Backend System Design
 - Clean Architecture
-- Backend Development Best Practices
+- Layered Architecture
 - Microservices Communication
+- API Security
+- Enterprise Backend Development
+
+---
+
+## 📌 Repository Status
+
+```text
+✅ Authentication Service
+✅ User Service
+🚧 Driver Service
+⏳ API Gateway
+⏳ Eureka Discovery Server
+⏳ Service Integration
+```
+
+---
+
+## 👨‍💻 Author
+
+**Ram Chandra Gupta**
+
+B.Tech Computer Science & Engineering (2023–2027)
+
+Building a production-inspired Ride Booking System using Spring Boot Microservices.

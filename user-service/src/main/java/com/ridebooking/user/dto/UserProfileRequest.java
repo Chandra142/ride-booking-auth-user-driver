@@ -1,5 +1,6 @@
 package com.ridebooking.user.dto;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 /**
@@ -8,14 +9,19 @@ import jakarta.validation.constraints.Size;
  * userId is NOT here — it comes from the X-User-Id header.
  */
 public record UserProfileRequest(
-    @Size(max = 15, message = "Phone number must not exceed 15 characters")
-    String phoneNumber,
 
-    String profilePictureUrl,
+        @NotBlank(message = "Full name is required")
+        @Size(max = 100, message = "Full name must not exceed 100 characters")
+        String fullName,
 
-    @Size(max = 255, message = "Home address must not exceed 255 characters")
-    String homeAddress,
+        @Size(max = 15, message = "Phone number must not exceed 15 characters")
+        String phoneNumber,
 
-    @Size(max = 255, message = "Work address must not exceed 255 characters")
-    String workAddress
+        String profilePictureUrl,
+
+        @Size(max = 255, message = "Home address must not exceed 255 characters")
+        String homeAddress,
+
+        @Size(max = 255, message = "Work address must not exceed 255 characters")
+        String workAddress
 ) {}

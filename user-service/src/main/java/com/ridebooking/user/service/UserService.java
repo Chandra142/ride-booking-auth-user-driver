@@ -67,15 +67,22 @@ public class UserService {
                 });
 
         // Only update fields that were actually provided
+        if (request.fullName() != null) {
+            profile.setFullName(request.fullName());
+        }
+
         if (request.phoneNumber() != null) {
             profile.setPhoneNumber(request.phoneNumber());
         }
+
         if (request.profilePictureUrl() != null) {
             profile.setProfilePictureUrl(request.profilePictureUrl());
         }
+
         if (request.homeAddress() != null) {
             profile.setHomeAddress(request.homeAddress());
         }
+
         if (request.workAddress() != null) {
             profile.setWorkAddress(request.workAddress());
         }
